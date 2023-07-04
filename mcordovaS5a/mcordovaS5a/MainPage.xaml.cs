@@ -35,5 +35,16 @@ namespace mcordovaS5a
         {
            Navigation.PushAsync(new Insertar());
         }
+
+        private void listaEstudiantes_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var objeto = (Estudiante)e.SelectedItem;
+            var codigoTem = objeto.codigo.ToString();
+            int codigo = Convert.ToInt32(codigoTem);
+            string nombre = objeto.nombre.ToString();
+            string apellido = objeto.apellido.ToString();
+            string edadTem = objeto.edad.ToString();
+            int edad = Convert.ToInt32(edadTem);
+        }
     }
 }
